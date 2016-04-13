@@ -24,4 +24,6 @@ RUN apt-get update && apt-get install -y \
     libjemalloc-dev \
     libssl-dev \
     libiberty-dev && \
-    autoreconf -ivf && ./configure && make && make install
+    autoreconf -ivf && ./configure && make && make install && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/*
