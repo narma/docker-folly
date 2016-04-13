@@ -1,8 +1,9 @@
 FROM ubuntu:14.04
 
-ADD . /src
+ADD . /folly
 
-WORKDIR /src/folly
+WORKDIR /folly/folly
+ENV LD_LIBRARY_PATH /usr/local/lib
 
 RUN apt-get update && apt-get install -y \
     g++ \
